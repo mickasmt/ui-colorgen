@@ -1,8 +1,14 @@
 ---
-title: Server and Client Components
-description: React Server Components allow developers to build applications that span the server and client.
-date: "2023-01-08"
+title: Style Guide
+description: Testing the MDX style guide with Tailwind Typography
 ---
+
+<Callout>
+
+- The text below is from the [Tailwind CSS](https://play.tailwindcss.com/uj1vGACRJA?layout=preview) docs. I copied it here to test the markdown styles. **Tailwind is awesome. You should use it.**
+- The CSS is from MDX sites I've built through the years. I copied this from [Nextra](https://github.com/shuding/nextra) and tweaked it a bit to fit the styles of this site.
+
+</Callout>
 
 Until now, trying to style an article, document, or blog post with Tailwind has been a tedious task that required a keen eye for typography and a lot of complex custom CSS.
 
@@ -59,7 +65,12 @@ Something a wise person once told me about typography is:
 
 It's probably important that images look okay here by default as well:
 
-<Image src="/blog-post-4.jpg" width="718" height="404" alt="Image" />
+<Image
+  src="/images/blog/blog-post-4.jpg"
+  width="718"
+  height="404"
+  alt="Image"
+/>
 
 Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
 
@@ -193,3 +204,13 @@ Phew, with any luck we have styled the headings above this text and they look pr
 Let's add a closing paragraph here so things end with a decently sized block of text. I can't explain why I want things to end that way but I have to assume it's because I think things will look weird or unbalanced if there is a heading too close to the end of the document.
 
 What I've written here is probably long enough, but adding this final sentence can't hurt.
+
+## GitHub Flavored Markdown
+
+I've also added support for GitHub Flavored Mardown using `remark-gfm`.
+
+With `remark-gfm`, we get a few extra features in our markdown. Example: autolink literals.
+
+A link like www.example.com or https://example.com would automatically be converted into an `a` tag.
+
+This works for email links too: contact@example.com.
