@@ -70,12 +70,12 @@ export default makeSource({
               node.children = [{ type: "text", value: " " }]
             }
           },
-          // onVisitHighlightedLine(node) {
-          //   node.properties.className.push("line--highlighted")
-          // },
-          // onVisitHighlightedWord(node) {
-          //   node.properties.className = ["word--highlighted"]
-          // },
+          onVisitHighlightedLine(node) {
+            node.properties.className.push("line--highlighted")
+          },
+          onVisitHighlightedWord(node) {
+            node.properties.className = ["word--highlighted"]
+          },
         },
       ],
       [
