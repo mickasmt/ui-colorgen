@@ -46,7 +46,7 @@ export default function CodePreview() {
   return (
     <div className="flex flex-col h-full lg:h-[820px] mt-3 w-full text-sm relative">
       {/* Select - Float top right */}
-      <div className="z-20 absolute top-0 right-0 bg-white">
+      <div className="z-20 absolute top-0 right-0">
         <Select
           defaultValue={format}
           onValueChange={(value: TypeFormat) => handleSelectFormat(value)}

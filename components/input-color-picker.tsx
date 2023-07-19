@@ -46,7 +46,7 @@ export default function InputColorPicker({ id, field, colorHsl }: IProps) {
           <div className="flex items-center text-xs">
             <div
               style={{ backgroundColor: colorPicker }}
-              className="w-12 h-4 border border-gray-300 mr-2"
+              className="w-12 h-4 border border-gray-300 dark:border-gray-600 mr-2"
             />
             <input
               id={`${field}-${id}`}

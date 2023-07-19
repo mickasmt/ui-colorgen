@@ -54,7 +54,7 @@ export default function CustomizationForm() {
       <div className="w-full overflow-auto">
         <ScrollArea className="relative h-full w-full min-w-[525px]">
           {/* Header Columns */}
-          <div className="sticky top-0 bg-white flex justify-between items-center py-3 border-y">
+          <div className="sticky top-0 bg-background flex justify-between items-center py-3 border-y">
             <span className="w-1/3 text-left align-middle font-semibold text-slate-600 dark:text-slate-400">
               Variables
             </span>

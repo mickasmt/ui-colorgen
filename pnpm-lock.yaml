@@ -127,6 +127,9 @@ devDependencies:
   '@types/react-color':
     specifier: ^3.0.6
     version: 3.0.6
+  '@types/react-syntax-highlighter':
+    specifier: ^15.5.7
+    version: 15.5.7
   mdast-util-toc:
     specifier: ^7.0.0
     version: 7.0.0
@@ -1940,6 +1943,12 @@ packages:
     dependencies:
       '@types/react': 18.2.0
     dev: false
+
+  /@types/react-syntax-highlighter@15.5.7:
+    resolution: {integrity: sha512-bo5fEO5toQeyCp0zVHBeggclqf5SQ/Z5blfFmjwO5dkMVGPgmiwZsJh9nu/Bo5L7IHTuGWrja6LxJVE2uB5ZrQ==}
+    dependencies:
+      '@types/react': 18.2.0
+    dev: true
 
   /@types/react@18.2.0:
     resolution: {integrity: sha512-0FLj93y5USLHdnhIhABk83rm8XEGA7kH3cr+YUlvxoUGp1xNt/DINUMvqPxLyOQMzLmZe8i4RTHbvb8MC7NmrA==}

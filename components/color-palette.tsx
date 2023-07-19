@@ -146,7 +146,7 @@ export default function ColorPalette() {
                     {color.scale}
                   </span>
                   <div
-                    className="w-10 h-4 border border-gray-300 md:w-16 md:h-5"
+                    className="w-10 h-4 border border-gray-300 dark:border-gray-600 md:w-16 md:h-5"
                     style={{
                       backgroundColor: color.hex,
                     }}

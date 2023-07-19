@@ -26,18 +26,19 @@ interface RootLayoutProps {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <div className="flex min-h-screen flex-col">
-      <header className="sticky top-0 z-40 w-full border-b bg-white dark:bg-slate-950">
-        <div className="container px-4 max-w-screen-2xl flex h-16 items-center space-x-4 sm:justify-between sm:space-x-0">
+      <header className="sticky top-0 z-40 w-full border-b bg-background">
+        <div className="container px-4 max-w-screen-2xl flex h-15 items-center space-x-4 sm:justify-between sm:space-x-0">
           <MainNav items={docsConfig.mainNav} />
           
           <div className="flex flex-1 items-center space-x-4 sm:justify-end">
-            <nav className="flex space-x-4">
+            <nav className="flex items-center space-x-4">
+              <ModeToggle />
               <Link
                 href={siteConfig.links.github}
                 target="_blank"
                 rel="noreferrer"
               >
-                <Icons.gitHub className="h-7 w-7" />
+                <Icons.gitHub className="h-6 w-6" />
                 <span className="sr-only">GitHub</span>
               </Link>
             </nav>
@@ -45,7 +46,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         </div>
       </header>
       <main className="flex-1">{children}</main>
-      <SiteFooter />
+      <SiteFooter className="border-t" />
     </div>
   )
 }
