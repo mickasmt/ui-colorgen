@@ -4,7 +4,6 @@ import {
   Check,
   ChevronLeft,
   ChevronRight,
-  Command,
   CreditCard,
   File,
   FileText,
@@ -15,6 +14,7 @@ import {
   LucideProps,
   Moon,
   MoreVertical,
+  Palette,
   Pizza,
   Plus,
   Settings,
@@ -29,7 +29,7 @@ import {
 export type Icon = LucideIcon
 
 export const Icons = {
-  logo: Command,
+  logo: Palette,
   close: X,
   spinner: Loader2,
   chevronLeft: ChevronLeft,
