@@ -27,7 +27,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <div className="flex min-h-screen flex-col">
       <header className="sticky top-0 z-40 w-full border-b bg-white dark:bg-slate-950">
-        <div className="container max-w-screen-2xl flex h-16 items-center space-x-4 sm:justify-between sm:space-x-0">
+        <div className="container px-4 max-w-screen-2xl flex h-16 items-center space-x-4 sm:justify-between sm:space-x-0">
           <MainNav items={docsConfig.mainNav} />
           
           <div className="flex flex-1 items-center space-x-4 sm:justify-end">
@@ -44,7 +44,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
           </div>
         </div>
       </header>
-      <main className="flex-1 container max-w-screen-2xl">{children}</main>
+      <main className="flex-1">{children}</main>
       <SiteFooter />
     </div>
   )
