@@ -32,7 +32,7 @@ This project is a user interface application designed to facilitate color setup 
 
 A list of things not working right now:
 
-1. Reorder in `tailwind.config.js` if default variable is remove and create again.
+1. Reorder in `tailwind.config.js` not working if default variable is remove and create again.
 
 > If you see something broken, you can ping me [@miickasmt](https://twitter.com/miickasmt).
 
