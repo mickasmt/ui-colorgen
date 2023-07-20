@@ -1,16 +1,16 @@
-import Link from "next/link"
+import Link from "next/link";
 
-import { docsConfig } from "@/config/docs"
-import { siteConfig } from "@/config/site"
-import { Icons } from "@/components/icons"
-import { MainNav } from "@/components/main-nav"
-import { DocsSearch } from "@/components/search"
-import { DocsSidebarNav } from "@/components/sidebar-nav"
-import { SiteFooter } from "@/components/site-footer"
-import { ModeToggle } from "@/components/mode-toggle"
+import { docsConfig } from "@/config/docs";
+import { siteConfig } from "@/config/site";
+import { Icons } from "@/components/icons";
+import { MainNav } from "@/components/main-nav";
+import { DocsSearch } from "@/components/search";
+import { DocsSidebarNav } from "@/components/sidebar-nav";
+import { SiteFooter } from "@/components/site-footer";
+import { ModeToggle } from "@/components/mode-toggle";
 
 interface DocsLayoutProps {
-  children: React.ReactNode
+  children: React.ReactNode;
 }
 
 export default function DocsLayout({ children }: DocsLayoutProps) {
@@ -26,15 +26,23 @@ export default function DocsLayout({ children }: DocsLayoutProps) {
               <DocsSearch />
             </div>
             <nav className="flex items-center space-x-4">
-              <ModeToggle />
+              <Link
+                href={siteConfig.links.twitter}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Icons.twitter className="h-5.5 w-5.5" />
+                <span className="sr-only">Twitter</span>
+              </Link>
               <Link
                 href={siteConfig.links.github}
                 target="_blank"
                 rel="noreferrer"
               >
-                <Icons.gitHub className="h-6 w-6" />
+                <Icons.gitHub className="h-5.5 w-5.5" />
                 <span className="sr-only">GitHub</span>
               </Link>
+              <ModeToggle />
             </nav>
           </div>
         </div>
@@ -42,5 +50,5 @@ export default function DocsLayout({ children }: DocsLayoutProps) {
       <div className="container flex-1">{children}</div>
       <SiteFooter className="border-t" />
     </div>
-  )
+  );
 }

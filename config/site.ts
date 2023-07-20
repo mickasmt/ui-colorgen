@@ -3,11 +3,11 @@ import { SiteConfig } from "types"
 export const siteConfig: SiteConfig = {
   name: "UI Colorgen",
   description:
-    "An open source application built using the new router, server components and everything new in Next.js 13.",
+    "An ui colorgen application built to help you with color setup in shadcn/ui.",
   url: "https://tx.shadcn.com",
   ogImage: "https://tx.shadcn.com/og.jpg",
   links: {
-    twitter: "https://twitter.com/shadcn",
-    github: "https://github.com/shadcn/taxonomy",
+    twitter: "https://twitter.com/miickasmt",
+    github: "https://github.com/mickasmt/shadcn-ui-colorgen",
   },
 }

@@ -63,6 +63,7 @@ module.exports = {
         sm: "calc(var(--radius) - 4px)",
       },
       height: {
+        "5.5": "1.375rem",
         "15": "3.75rem",
       },
       keyframes: {

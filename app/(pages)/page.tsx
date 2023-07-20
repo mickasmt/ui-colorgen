@@ -6,7 +6,7 @@ import CustomizationForm from "@/components/customization-form";
 
 export default function HomeColorsPage() {
   return (
-    <div className="container px-4 max-w-screen-2xl py-4">
+    <div className="f-container py-4">
       <div className="grid gap-11 grid-cols-1 xl:grid-cols-2 xl:auto-rows-fr">
         <ColorPalette />
 

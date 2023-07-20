@@ -13,12 +13,23 @@ import {
 
 import { ScrollArea } from "./ui/scroll-area";
 import InputColorPicker from "./input-color-picker";
+import { useToast } from "./ui/use-toast";
 
 export default function CustomizationForm() {
+  const { toast } = useToast();
+
   const variables = useColors((state) => state.variables);
   const addVariable = useColors((state) => state.addVariable);
   const updateVariable = useColors((state) => state.updateVariable);
   const deleteVariable = useColors((state) => state.deleteVariable);
+
+  const handleAddVariable = () => {
+    addVariable();
+    toast({
+      variant: "success",
+      description: "New variable line added!",
+    });
+  };
 
   const buttonRemoveVariable = (id: string) => (
     <div className="w-10">
@@ -46,7 +57,7 @@ export default function CustomizationForm() {
     <div className="flex flex-col h-auto lg:h-[820px] mt-3 w-full overflow-hidden text-sm">
       {/* Button - Add variable */}
       <div className="flex items-center justify-end pb-3">
-        <Button size="sm" onClick={addVariable}>
+        <Button size="sm" onClick={() => handleAddVariable()}>
           <Plus className="mr-2 h-4 w-4" /> Add variable
         </Button>
       </div>
@@ -96,11 +107,19 @@ export default function CustomizationForm() {
                   </div>
 
                   <div className="w-1/3">
-                    <InputColorPicker id={variable.id} field="lightValue" colorHsl={variable.lightValue} />
+                    <InputColorPicker
+                      id={variable.id}
+                      field="lightValue"
+                      colorHsl={variable.lightValue}
+                    />
                   </div>
 
                   <div className="w-1/3">
-                    <InputColorPicker id={variable.id} field="darkValue" colorHsl={variable.darkValue} />
+                    <InputColorPicker
+                      id={variable.id}
+                      field="darkValue"
+                      colorHsl={variable.darkValue}
+                    />
                   </div>
                 </div>
 

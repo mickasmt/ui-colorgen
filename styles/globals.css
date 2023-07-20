@@ -6,9 +6,9 @@
   :root {
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
- 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
  
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
@@ -39,9 +39,9 @@
   .dark {
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
- 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
  
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
@@ -74,5 +74,8 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+  .f-container {
+    @apply w-full mx-auto px-4 max-w-screen-2xl;
   }
 }

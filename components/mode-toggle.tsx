@@ -78,7 +78,7 @@ export function ModeToggle() {
     <button
       role="button"
       onClick={() => setTheme(theme === "light" ? "dark" : "light")}
-      className="p-2 min-h-[40px] -mr-2 block focus:outline-none"
+      className="min-h-[40px] -mr-2 block focus:outline-none"
     >
       <span className="sr-only">Toggle mode</span>
       <AnimatePresence initial={false}>
