@@ -78,4 +78,8 @@
   .f-container {
     @apply w-full mx-auto px-4 max-w-screen-2xl;
   }
+  /* for SyntaxHighlighter component */
+  pre {
+    @apply h-full lg:pb-16 !important;
+  }
 }

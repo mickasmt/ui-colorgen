@@ -8,17 +8,15 @@ import {
 
 // all colors tailwindcss (scale/hex/rgb/hsl)
 export const tailwindColors: TailwindColors = {
-  white: [
+  others: [
     {
       scale: 0,
       hex: "#ffffff",
       rgb: "rgb(255,255,255)",
       hsl: "hsl(0,0%,100%)",
     },
-  ],
-  black: [
     {
-      scale: 0,
+      scale: 500,
       hex: "#000000",
       rgb: "rgb(0,0,0)",
       hsl: "hsl(0,0%,0%)",

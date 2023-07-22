@@ -27,7 +27,6 @@ const TabCodeViewer = ({ data }: { data: TabCodeProps[] }) => {
               <SyntaxHighlighter
                 language={item.language}
                 style={atomDark}
-                className="h-full pb-10"
               >
                 {item.code}
               </SyntaxHighlighter>
