@@ -131,7 +131,7 @@ export function generateCSSCode(data: Variable[], format: TypeFormat): string {
 export function generateTailwindCode(
   variables: Variable[],
   format: string
-): string {
+): {display: string, copy: string} {
   const colorProperties: {
     [colorName: string]: { [propertyName: string]: string };
   } = {};
@@ -201,5 +201,5 @@ module.exports = {
   plugins: [require("tailwindcss-animate")],
 }`;
 
-  return twCodeJS;
+  return { display: twCodeJS, copy: colorCode };
 }

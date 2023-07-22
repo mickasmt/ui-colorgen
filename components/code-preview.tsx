@@ -32,13 +32,14 @@ export default function CodePreview() {
     {
       tabValue: "account",
       label: "tailwind.config.js",
-      code: twConfigGenerated,
+      displayCode: twConfigGenerated.display,
+      copyCode: twConfigGenerated.copy,
       language: "javascript",
     },
     {
       tabValue: "password",
       label: "globals.css",
-      code: cssGenerated,
+      displayCode: cssGenerated,
       language: "css",
     },
   ];

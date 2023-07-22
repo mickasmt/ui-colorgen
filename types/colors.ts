@@ -55,6 +55,7 @@ export interface HslColorPicker {
 export interface TabCodeProps {
   tabValue: string;
   label: string;
-  code: string;
   language: string;
+  copyCode?: string;
+  displayCode: string;
 }

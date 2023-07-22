@@ -21,14 +21,14 @@ const TabCodeViewer = ({ data }: { data: TabCodeProps[] }) => {
           <TabsContent key={item.tabValue} value={item.tabValue} className="h-full">
             <div className="relative h-full">
               <CopyButton
-                value={item.code}
+                value={item.copyCode ? item.copyCode : item.displayCode}
                 className="absolute top-2 right-7 z-20"
               />
               <SyntaxHighlighter
                 language={item.language}
                 style={atomDark}
               >
-                {item.code}
+                {item.displayCode}
               </SyntaxHighlighter>
             </div>
           </TabsContent>
