@@ -118,7 +118,10 @@ export function generateCSSCode(data: Variable[], format: TypeFormat): string {
     }
 
     for (const variable of variables) {
-      cssCode += `    --${variable.name}: ${variable.darkValue};\n`;
+      cssCode += `    --${variable.name}: ${displayCssByFormat(
+        variable.darkValue,
+        format
+      )};\n`;
     }
 
     lastGroup = group;
