@@ -1,6 +1,6 @@
-# shadcn-ui-colorgen
+# UI Colorgen
 
-An ui colorgen application built to help you with color setup in shadcn/ui.
+An ui colorgen application built to help you with color setup in **shadcn/ui**.
 
 ![hero](public/og.jpg)
 
@@ -25,10 +25,12 @@ This project is a user interface application designed to facilitate color setup 
 
 ## Roadmap
 
+- [ ] Add documentation part (coming soon)
 - [ ] Select initial color (slate/gray/zinc/neutral/stone)
 - [ ] Live color preview of components
 - [ ] Import own variables from `globals.css`
 - [ ] Kamelcase for new variable name with "-"
+- [ ] Increase UX for "Add Variable" into modal component
 
 ## Known Issues
 

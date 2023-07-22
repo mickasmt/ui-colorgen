@@ -8,16 +8,22 @@ import {
 
 // all colors tailwindcss (scale/hex/rgb/hsl)
 export const tailwindColors: TailwindColors = {
-  // black: {
-  //   hex: "#000000",
-  //   rgb: "rgb(0,0,0)",
-  //   hsl: "hsl(0,0%,0%)",
-  // },
-  // white: {
-  //   hex: "#ffffff",
-  //   rgb: "rgb(255,255,255)",
-  //   hsl: "hsl(0,0%,100%)",
-  // },
+  white: [
+    {
+      scale: 0,
+      hex: "#ffffff",
+      rgb: "rgb(255,255,255)",
+      hsl: "hsl(0,0%,100%)",
+    },
+  ],
+  black: [
+    {
+      scale: 0,
+      hex: "#000000",
+      rgb: "rgb(0,0,0)",
+      hsl: "hsl(0,0%,0%)",
+    },
+  ],
   slate: [
     {
       scale: 50,
@@ -1581,7 +1587,7 @@ export const defaultVariables: Variable[] = [
     lightValue: "222.2 84% 4.9%",
     darkValue: "210 40% 98%",
   },
-  
+
   {
     id: "cea186b2-7d18-4f81-b03e-2c04999ff528",
     isNew: false,
@@ -1651,7 +1657,7 @@ export const defaultVariables: Variable[] = [
     name: "destructive-foreground",
     lightValue: "210 40% 98%",
     darkValue: "0 85.7% 97.3%",
-  }
+  },
 ];
 
 export const formatOptions: FormatOption[] = [
