@@ -4,18 +4,18 @@ import { ogImageSchema } from "@/lib/validations/og"
 
 export const runtime = "edge"
 
-// const interRegular = fetch(
-//   new URL("../../../assets/fonts/Inter-Regular.ttf", import.meta.url)
-// ).then((res) => res.arrayBuffer())
+const interRegular = fetch(
+  new URL("../../../assets/fonts/Inter-Regular.ttf", import.meta.url)
+).then((res) => res.arrayBuffer())
 
-// const interBold = fetch(
-//   new URL("../../../assets/fonts/CalSans-SemiBold.ttf", import.meta.url)
-// ).then((res) => res.arrayBuffer())
+const interBold = fetch(
+  new URL("../../../assets/fonts/CalSans-SemiBold.ttf", import.meta.url)
+).then((res) => res.arrayBuffer())
 
 export async function GET(req: Request) {
   try {
-    // const fontRegular = await interRegular
-    // const fontBold = await interBold
+    const fontRegular = await interRegular
+    const fontBold = await interBold
 
     const url = new URL(req.url)
     const values = ogImageSchema.parse(Object.fromEntries(url.searchParams))
@@ -27,7 +27,7 @@ export async function GET(req: Request) {
     const { mode } = values
     const paint = mode === "dark" ? "#fff" : "#000"
 
-    // const fontSize = heading.length > 100 ? "70px" : "100px"
+    const fontSize = heading.length > 100 ? "70px" : "100px"
 
     return new ImageResponse(
       (
@@ -73,18 +73,18 @@ export async function GET(req: Request) {
           <div tw="flex flex-col flex-1 py-10">
             <div
               tw="flex text-xl uppercase font-bold tracking-tight"
-              // style={{ fontFamily: "Inter", fontWeight: "normal" }}
+              style={{ fontFamily: "Inter", fontWeight: "normal" }}
             >
               {values.type}
             </div>
             <div
               tw="flex leading-[1.1] text-[80px] font-bold"
-              // style={{
-              //   fontFamily: "Cal Sans",
-              //   fontWeight: "bold",
-              //   marginLeft: "-3px",
-              //   fontSize,
-              // }}
+              style={{
+                fontFamily: "Cal Sans",
+                fontWeight: "bold",
+                marginLeft: "-3px",
+                fontSize,
+              }}
             >
               {heading}
             </div>
@@ -92,13 +92,13 @@ export async function GET(req: Request) {
           <div tw="flex items-center w-full justify-between">
             <div
               tw="flex text-xl"
-              // style={{ fontFamily: "Inter", fontWeight: "normal" }}
+              style={{ fontFamily: "Inter", fontWeight: "normal" }}
             >
               ui-colorgen.vercel.app
             </div>
             <div
               tw="flex items-center text-xl"
-              // style={{ fontFamily: "Inter", fontWeight: "normal" }}
+              style={{ fontFamily: "Inter", fontWeight: "normal" }}
             >
               <svg width="32" height="32" viewBox="0 0 48 48" fill="none">
                 <path
@@ -124,20 +124,20 @@ export async function GET(req: Request) {
       {
         width: 1200,
         height: 630,
-        // fonts: [
-        //   {
-        //     name: "Inter",
-        //     data: fontRegular,
-        //     weight: 400,
-        //     style: "normal",
-        //   },
-        //   {
-        //     name: "Cal Sans",
-        //     data: fontBold,
-        //     weight: 700,
-        //     style: "normal",
-        //   },
-        // ],
+        fonts: [
+          {
+            name: "Inter",
+            data: fontRegular,
+            weight: 400,
+            style: "normal",
+          },
+          {
+            name: "Cal Sans",
+            data: fontBold,
+            weight: 700,
+            style: "normal",
+          },
+        ],
       }
     )
   } catch (error) {
