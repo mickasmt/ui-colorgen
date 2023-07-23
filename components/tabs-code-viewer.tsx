@@ -10,9 +10,9 @@ const TabCodeViewer = ({ data }: { data: TabCodeProps[] }) => {
   return (
     <div className="rounded-md overflow-hidden">
       <Tabs defaultValue="account" className="h-full">
-        <TabsList className="h-9 text-sm">
+        <TabsList className="h-9 text-sm gap-1">
           {data.map((item) => (
-            <TabsTrigger key={item.tabValue} value={item.tabValue}>
+            <TabsTrigger key={item.tabValue} value={item.tabValue} className="border data-[state=active]:border-slate-300 dark:data-[state=active]:border-slate-400">
               {item.label}
             </TabsTrigger>
           ))}

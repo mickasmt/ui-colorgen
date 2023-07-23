@@ -39,7 +39,9 @@ export async function generateMetadata({
     return {}
   }
 
-  const url = process.env.NEXT_PUBLIC_APP_URL
+  // const url = process.env.NEXT_PUBLIC_APP_URL
+  const url = "https://ui-colorgen.vercel.app"
+
 
   const ogUrl = new URL(`${url}/api/og`)
   ogUrl.searchParams.set("heading", doc.description ?? doc.title)
