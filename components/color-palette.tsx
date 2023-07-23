@@ -109,8 +109,8 @@ export default function ColorPalette() {
           defaultValue={wrapper}
           onValueChange={(value: string) => setWrapper(value)}
         >
-          <SelectTrigger className="w-[180px] h-9">
-            <span className="text-slate-500">Wrapper: </span>
+          <SelectTrigger className="w-auto sm:w-[180px] h-9">
+            <span className="hidden sm:block text-slate-500">Wrapper: </span>
             <SelectValue placeholder="Select a wrapper" />
           </SelectTrigger>
           <SelectContent>
@@ -125,7 +125,7 @@ export default function ColorPalette() {
 
       <hr />
 
-      <Table className="text-sm">
+      <Table className="text-sm w-full min-w-[525px]">
         <TableCaption>
           {copiedValue ? `Copied value : ${copiedValue}` : "Click on a value to copy"}
         </TableCaption>

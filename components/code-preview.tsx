@@ -52,8 +52,8 @@ export default function CodePreview() {
           defaultValue={format}
           onValueChange={(value: TypeFormat) => handleSelectFormat(value)}
         >
-          <SelectTrigger className="w-[150px] h-9">
-            <span className="text-slate-500">Format: </span>
+          <SelectTrigger className="w-auto sm:w-[150px] h-9">
+            <span className="hidden sm:block text-slate-500">Format: </span>
             <SelectValue placeholder="Select a format" />
           </SelectTrigger>
           <SelectContent>

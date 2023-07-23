@@ -18,7 +18,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <div className="f-container flex h-15 items-center space-x-4 sm:justify-between sm:space-x-0">
           <MainNav items={docsConfig.mainNav} />
 
-          <div className="flex flex-1 items-center space-x-4 sm:justify-end">
+          <div className="flex flex-1 items-center space-x-4 justify-end">
             <nav className="flex items-center space-x-4">
               <Link
                 href={siteConfig.links.twitter}
