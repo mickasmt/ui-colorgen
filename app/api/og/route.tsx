@@ -94,7 +94,7 @@ export async function GET(req: Request) {
               tw="flex text-xl"
               // style={{ fontFamily: "Inter", fontWeight: "normal" }}
             >
-              shadcn-ui-colorgen.vercel.app
+              ui-colorgen.vercel.app
             </div>
             <div
               tw="flex items-center text-xl"
@@ -116,7 +116,7 @@ export async function GET(req: Request) {
                   stroke-linejoin="round"
                 />
               </svg>
-              <div tw="flex ml-2">github.com/mickasmt/shadcn-ui-colorgen</div>
+              <div tw="flex ml-2">github.com/mickasmt/ui-colorgen</div>
             </div>
           </div>
         </div>
