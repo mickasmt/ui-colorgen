@@ -53,7 +53,7 @@ export default function InputColorPicker({ id, field, colorHsl }: IProps) {
               readOnly
               type="text"
               value={colorPicker ? colorPicker : "#ffffff"}
-              className="w-full outline-none uppercase cursor-pointer"
+              className="w-full outline-none uppercase cursor-pointer bg-transparent"
               // only hex = uppercase
             />
           </div>
