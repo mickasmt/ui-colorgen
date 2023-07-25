@@ -1,15 +1,13 @@
 ---
 title: Documentation
-description: Welcome to the Taxonomy documentation.
+description: Welcome to the UI Colorgen documentation.
 ---
 
-This is the documentation for the Taxonomy site.
+This is the documentation for the UI Colorgen site.
 
-This is an example of a doc site built using [ContentLayer](/docs/documentation/contentlayer) and MDX.
+<Callout type="info">
 
-<Callout>
-
-This site is a work in progress. If you see dummy text on a page, it means I'm still working on it. You can follow updates on Twitter [@shadcn](https://twitter.com/shadcn).
+This site is currently in beta. Some pages of the documentation are not yet accessible for the moment. You can follow updates on Twitter [@miickasmt](https://twitter.com/mickasmt) **or** on the [roadmap](/docs#roadmap).
 
 </Callout>
 
@@ -19,36 +17,46 @@ Select a feature below to learn more about it.
 
 <div className="grid sm:grid-cols-2 gap-4 mt-6">
 
-<Card href="/docs/documentation">
+<Card href="/docs/colors">
 
-### Documentation
+### Colors
 
-This documentation site built using Contentlayer.
-
-</Card>
-
-<Card href="/docs/marketing" disabled>
-
-### Marketing
-
-The marketing site with landing pages.
+All about the colors and the different formats
 
 </Card>
 
-<Card href="/docs/app" disabled>
+<Card href="/docs/variables">
 
-### App
+### Variables
 
-The dashboard with auth and subscriptions.
+Check how to properly handle CSS variables
 
 </Card>
 
-<Card href="/docs/blog" disabled>
+<Card href="/docs/files-generated">
 
-### Blog
+### Files generated
 
-The blog built using Contentlayer and MDX.
+More details on tailwind.config.js and globals.css
+
+</Card>
+
+<Card href="/docs/preview-components" disabled>
+
+### Preview components
+
+How does live component preview work
 
 </Card>
 
 </div>
+
+## Roadmap
+
+- [X]  ~Add documentation~
+- [ ]  Select initial color (slate/gray/zinc/neutral/stone)
+- [ ]  Import own variables from `globals.css`
+- [ ]  Live color preview of components
+- [ ]  Kamelcase for new variable name with "-"
+- [ ]  Improve UX for "Add Variable" into modal component
+

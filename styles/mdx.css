@@ -1,5 +1,5 @@
 [data-rehype-pretty-code-fragment] code {
-  @apply grid min-w-full break-words rounded-none border-0 bg-transparent p-0 text-sm text-black;
+  @apply grid min-w-full break-words rounded-none border-none bg-transparent p-0 text-sm text-black;
   counter-reset: line;
   box-decoration-break: clone;
 }
@@ -29,4 +29,11 @@
 }
 [data-rehype-pretty-code-title] + pre {
   @apply mt-0;
+}
+
+.list-disc.contains-task-list {
+  @apply ml-0 list-none !important;
+}
+.task-list-item input {
+  @apply mr-3;
 }

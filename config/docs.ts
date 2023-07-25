@@ -21,28 +21,19 @@ export const docsConfig: DocsConfig = {
       title: "Documentation",
       items: [
         {
-          title: "Introduction",
-          href: "/docs/documentation",
+          title: "Colors",
+          href: "/docs/documentation/colors",
         },
         {
-          title: "Contentlayer",
-          href: "/docs/in-progress",
-          disabled: true,
+          title: "Variables",
+          href: "/docs/documentation/variables",
         },
         {
-          title: "Components",
-          href: "/docs/documentation/components",
+          title: "Files generated",
+          href: "/docs/documentation/files-generated",
         },
         {
-          title: "Code Blocks",
-          href: "/docs/documentation/code-blocks",
-        },
-        {
-          title: "Style Guide",
-          href: "/docs/documentation/style-guide",
-        },
-        {
-          title: "Search",
+          title: "Preview components",
           href: "/docs/in-progress",
           disabled: true,
         },
