@@ -62,4 +62,4 @@ pnpm dev
 
 ## License
 
-Licensed under the [MIT license](https://github.com/mickasmt/ui-colorgen/blob/main/README.md).
+Licensed under the [MIT license](https://github.com/mickasmt/ui-colorgen/blob/main/LICENCE.md).
