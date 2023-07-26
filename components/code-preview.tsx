@@ -58,8 +58,8 @@ export default function CodePreview() {
           </SelectTrigger>
           <SelectContent>
             {formatOptions.map((option) => (
-              <SelectItem key={option.name} value={option.value}>
-                {option.name}
+              <SelectItem key={option.label} value={option.value}>
+                {option.label}
               </SelectItem>
             ))}
           </SelectContent>

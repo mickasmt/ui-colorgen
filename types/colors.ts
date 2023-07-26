@@ -24,10 +24,6 @@ export interface Variable {
   darkValue: string;
 }
 
-export interface FormatOption {
-  name: string;
-  value: TypeFormat;
-}
 
 export enum TypeFormat {
   HSL = "hsl",
@@ -35,7 +31,7 @@ export enum TypeFormat {
   RGBA = "rgba",
 }
 
-export interface WrapperOption {
+export interface FormatOption {
   label: string;
   value: string;
 }

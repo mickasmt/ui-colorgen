@@ -2,7 +2,7 @@
 
 import { useState, useMemo } from "react";
 import { Color, ColorData } from "@/types/colors";
-import { tailwindColors, wrapperOptions } from "@/config/colors";
+import { wrapperOptions } from "@/config/colors";
 
 import {
   Table,
@@ -21,6 +21,8 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { wrapValue } from "@/lib/colors";
+import { tailwindColors } from "@/registry/colors";
 
 export default function ColorPalette() {
   const [selectedColor, setSelectedColor] = useState("slate");
@@ -32,7 +34,7 @@ export default function ColorPalette() {
   };
 
   const handleCopyValue = (value: string) => {
-    const wrappedValue = wrapValue(value);
+    const wrappedValue = wrapValue(value, wrapper);
     navigator.clipboard.writeText(wrappedValue);
     setCopiedValue(wrappedValue);
   };
@@ -53,22 +55,6 @@ export default function ColorPalette() {
     },
     {}
   );
-
-  const wrapValue = (value: string) => {
-    if (wrapper === "full") {
-      return value;
-    } else if (wrapper === "comma") {
-      return value
-        .replace(/rgb\((.*?)\)/g, (_, content) => content.replace(/,/g, ", "))
-        .replace(/hsl\((.*?)\)/g, (_, content) => content.replace(/,/g, ", "));
-    } else if (wrapper === "nothing") {
-      return value
-        .replace(/rgb\((.*?)\)/g, (_, content) => content.replace(/,/g, " "))
-        .replace(/hsl\((.*?)\)/g, (_, content) => content.replace(/,/g, " "))
-        .replace(/#([a-fA-F0-9]{6}|[a-fA-F0-9]{3})/g, (_, content) => content);
-    }
-    return value;
-  };
 
   return (
     <div className="w-full">
@@ -157,19 +143,19 @@ export default function ColorPalette() {
                 className="cursor-pointer select-none"
                 onClick={() => handleCopyValue(color.hex.toUpperCase())}
               >
-                {wrapValue(color.hex.toUpperCase())}
+                {wrapValue(color.hex.toUpperCase(), wrapper)}
               </TableCell>
               <TableCell
                 className="cursor-pointer select-none"
                 onClick={() => handleCopyValue(color.rgb)}
               >
-                {wrapValue(color.rgb)}
+                {wrapValue(color.rgb, wrapper)}
               </TableCell>
               <TableCell
                 className="cursor-pointer select-none"
                 onClick={() => handleCopyValue(color.hsl)}
               >
-                {wrapValue(color.hsl)}
+                {wrapValue(color.hsl, wrapper)}
               </TableCell>
             </TableRow>
           ))}

@@ -10,6 +10,13 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 import { ScrollArea } from "./ui/scroll-area";
 import InputColorPicker from "./input-color-picker";
@@ -56,7 +63,25 @@ export default function CustomizationForm() {
   return (
     <div className="flex flex-col h-auto lg:h-[820px] mt-3 w-full overflow-hidden text-sm">
       {/* Button - Add variable */}
-      <div className="flex items-center justify-end pb-3">
+      <div className="flex items-center justify-between pb-3">
+        {/* <Select
+          defaultValue={format}
+          onValueChange={(value: TypeFormat) => handleSelectFormat(value)}
+        >
+          <SelectTrigger className="w-auto sm:w-[150px] h-9">
+            <span className="hidden sm:block text-slate-500">Format: </span>
+            <SelectValue placeholder="Select a format" />
+          </SelectTrigger>
+          <SelectContent>
+            {formatOptions.map((option) => (
+              <SelectItem key={option.label} value={option.value}>
+                {option.label}
+              </SelectItem>
+            ))}
+          </SelectContent>
+        </Select> */}
+        <span>select</span>
+
         <Button size="sm" onClick={() => handleAddVariable()}>
           <Plus className="mr-2 h-4 w-4" /> Add variable
         </Button>

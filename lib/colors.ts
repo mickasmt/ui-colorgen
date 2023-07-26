@@ -1,17 +1,83 @@
 import convert from "color-convert";
+import { v4 as uuidv4 } from "uuid";
 import {
+  Color,
   HslColorPicker,
   RgbColorPicker,
   TypeFormat,
   Variable,
 } from "@/types/colors";
+import { colorMapping, tailwindColors } from "@/registry/colors";
 
-// RGB Part
+// ===================== Variables Part =====================
+export const wrapValue = (value: string, wrapper: string) => {
+  if (wrapper === "full") {
+    return value;
+  } else if (wrapper === "comma") {
+    return value
+      .replace(/rgb\((.*?)\)/g, (_, content) => content.replace(/,/g, ", "))
+      .replace(/hsl\((.*?)\)/g, (_, content) => content.replace(/,/g, ", "));
+  } else if (wrapper === "nothing") {
+    return value
+      .replace(/rgb\((.*?)\)/g, (_, content) => content.replace(/,/g, " "))
+      .replace(/hsl\((.*?)\)/g, (_, content) => content.replace(/,/g, " "))
+      .replace(/#([a-fA-F0-9]{6}|[a-fA-F0-9]{3})/g, (_, content) => content);
+  }
+  return value;
+};
+
+export const getHSLFromTailwindColors = (color: string): string => {
+  const [colorKey, scaleStr] = color.toLowerCase().split("-");
+  const scale = Number(scaleStr);
+
+  const colorDataArray: Color[] = tailwindColors[colorKey];
+
+  if (colorDataArray) {
+    if (!isNaN(scale)) {
+      const colorData = colorDataArray.find((data) => data.scale === scale);
+      if (colorData && colorData.hsl) {
+        return wrapValue(colorData.hsl, "nothing");
+      }
+    } 
+  } else if ((colorKey === "white" || colorKey === "black") && tailwindColors.others) {
+    const othersScale = colorKey === "white" ? 0 : 500;
+    return wrapValue(tailwindColors.others[othersScale].hsl, "nothing");
+  }
+
+  return "0 0% 100%";
+};
+
+export const generateVariablesFromColor = (selectedColor: string = "slate"): Variable[] => {
+  const colorVariables: Variable[] = [];
+
+  const mapping = colorMapping(selectedColor);
+  Object.keys(mapping).forEach((name) => {
+    const lightValue = getHSLFromTailwindColors(mapping[name as keyof typeof mapping].light);
+    const darkValue = getHSLFromTailwindColors(mapping[name as keyof typeof mapping].dark);
+
+    const variable: Variable = {
+      id: uuidv4(),
+      isNew: false,
+      name,
+      lightValue,
+      darkValue,
+    };
+
+    colorVariables.push(variable);
+  });
+
+  return colorVariables;
+};
+
+
+
+// ===================== RGB Part =====================
 export function convertObjectToRGBString(obj: RgbColorPicker) {
   return Object.values(obj).join(", ");
 }
 
-// HSL Part
+
+// ===================== HSL Part =====================
 export function convertStringToArrayHsl(hslString: string) {
   const hslValues = hslString
     .split(" ")
