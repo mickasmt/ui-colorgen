@@ -61,7 +61,7 @@ const useColors = create<ColorState>()(
           variables: state.variables.filter((v) => v.id !== id),
         })),
     }),
-    { enabled: true }
+    { enabled: false }
   )
 );
 

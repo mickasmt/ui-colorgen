@@ -31,6 +31,8 @@ export default function CustomizationForm() {
   const addVariable = useColors((state) => state.addVariable);
   const updateVariable = useColors((state) => state.updateVariable);
   const deleteVariable = useColors((state) => state.deleteVariable);
+
+  const initialColor = useColors((state) => state.initialColor);
   const updateInitialColor = useColors((state) => state.updateInitialColor);
 
   const handleSelectInitialColor = (value: TwColorsKeys) => {
@@ -72,7 +74,7 @@ export default function CustomizationForm() {
       <div className="flex items-center justify-between pb-3">
         {/* Select initial color */}
         <Select
-          defaultValue="slate"
+          defaultValue={initialColor}
           onValueChange={(value: TwColorsKeys) => handleSelectInitialColor(value)}
           >
           <SelectTrigger className="w-auto sm:w-[150px] h-9">
@@ -81,7 +83,7 @@ export default function CustomizationForm() {
           </SelectTrigger>
           
           <SelectContent className="h-full" asChild>
-            <ScrollArea className="h-auto max-h-60">
+            <ScrollArea className="h-60">
               {twColors.map((name) => (
                 <SelectItem key={name} value={name}>
                   {name}
