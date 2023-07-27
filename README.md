@@ -17,6 +17,7 @@ This project is a user interface application designed to facilitate color setup 
 - List of colors **TailwindCSS** (hex, rgb, hsl)
 - Update colors variables with **Color Picker**
 - Add your **own variables** in the list 
+- **Select initial color** for your variables
 - **Select the format** that suits you best
 - **Generate variables** for root in `globals.css`
 - **Generate colors part** for `tailwind.config.js`
@@ -25,12 +26,12 @@ This project is a user interface application designed to facilitate color setup 
 
 ## Roadmap
 
+- [X] Select initial color (all tailwind colors)
 - [ ] Add documentation part (coming soon)
-- [ ] Select initial color (slate/gray/zinc/neutral/stone)
 - [ ] Live color preview of components
 - [ ] Import own variables from `globals.css`
 - [ ] Kamelcase for new variable name with "-"
-- [ ] Increase UX for "Add Variable" into modal component
+- [ ] Increase UX for "Add Variable" into sheet/drawer component
 
 ## Known Issues
 
