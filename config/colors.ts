@@ -1,4 +1,5 @@
 import { generateVariablesFromColor } from "@/lib/colors";
+import { tailwindColors } from "@/registry/colors";
 import {
   Variable,
   FormatOption,
@@ -144,6 +145,8 @@ import {
 // ];
 
 export const defaultVariables: Variable[] = generateVariablesFromColor();
+
+export const twColors = Object.keys(tailwindColors).filter((key) => key !== "others");
 
 export const formatOptions: FormatOption[] = [
   { label: "HSL", value: TypeFormat.HSL },

@@ -69,6 +69,13 @@ export const generateVariablesFromColor = (selectedColor: string = "slate"): Var
   return colorVariables;
 };
 
+export const updateVariablesFromColor = (selectedColor: string, currentVariables: Variable[]): Variable[] => {
+  const customVariables = currentVariables.filter((variable) => variable.isNew === true);
+  const newDefaultVariables = generateVariablesFromColor(selectedColor);
+
+  return [...newDefaultVariables, ...customVariables];
+}
+
 
 
 // ===================== RGB Part =====================

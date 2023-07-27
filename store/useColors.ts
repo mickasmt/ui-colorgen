@@ -2,10 +2,13 @@ import { create } from "zustand";
 import { v4 as uuidv4 } from "uuid";
 import { devtools } from "zustand/middleware";
 
-import { TypeFormat, Variable } from "@/types/colors";
+import { TwColorsKeys, TypeFormat, Variable } from "@/types/colors";
 import { defaultVariables } from "@/config/colors";
+import { updateVariablesFromColor } from "@/lib/colors";
 
 interface ColorState {
+  initialColor: TwColorsKeys;
+  updateInitialColor: (color: TwColorsKeys) => void;
   format: TypeFormat;
   updateFormat: (type: TypeFormat) => void;
   variables: Variable[];
@@ -17,6 +20,14 @@ interface ColorState {
 const useColors = create<ColorState>()(
   devtools(
     (set) => ({
+      // Initial color section
+      initialColor: "slate",
+      updateInitialColor: (color) =>
+        set((state) => ({
+          initialColor: color,
+          variables: updateVariablesFromColor(color, state.variables)
+        })),
+
       // Format section
       format: TypeFormat.HSL,
       updateFormat: (type) =>
@@ -50,7 +61,7 @@ const useColors = create<ColorState>()(
           variables: state.variables.filter((v) => v.id !== id),
         })),
     }),
-    { enabled: false }
+    { enabled: true }
   )
 );
 

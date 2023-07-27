@@ -1,3 +1,5 @@
+import { twColors } from "@/config/colors";
+
 export interface Color {
   scale: number;
   hex: string;
@@ -16,6 +18,8 @@ export interface TailwindColors {
   [key: string]: Color[];
 }
 
+export type TwColorsKeys = typeof twColors[number];
+
 export interface Variable {
   id: string;
   isNew: boolean;
@@ -23,7 +27,6 @@ export interface Variable {
   lightValue: string;
   darkValue: string;
 }
-
 
 export enum TypeFormat {
   HSL = "hsl",

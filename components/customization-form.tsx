@@ -21,7 +21,8 @@ import {
 import { ScrollArea } from "./ui/scroll-area";
 import InputColorPicker from "./input-color-picker";
 import { useToast } from "./ui/use-toast";
-import { tailwindColors } from "@/registry/colors";
+import { twColors } from "@/config/colors";
+import { TwColorsKeys } from "@/types/colors";
 
 export default function CustomizationForm() {
   const { toast } = useToast();
@@ -30,6 +31,11 @@ export default function CustomizationForm() {
   const addVariable = useColors((state) => state.addVariable);
   const updateVariable = useColors((state) => state.updateVariable);
   const deleteVariable = useColors((state) => state.deleteVariable);
+  const updateInitialColor = useColors((state) => state.updateInitialColor);
+
+  const handleSelectInitialColor = (value: TwColorsKeys) => {
+    updateInitialColor(value);
+  }
 
   const handleAddVariable = () => {
     addVariable();
@@ -67,16 +73,16 @@ export default function CustomizationForm() {
         {/* Select initial color */}
         <Select
           defaultValue="slate"
-          // onValueChange={(value: TypeFormat) => handleSelectFormat(value)}
+          onValueChange={(value: TwColorsKeys) => handleSelectInitialColor(value)}
           >
           <SelectTrigger className="w-auto sm:w-[150px] h-9">
             <span className="hidden sm:block text-slate-500">Color : </span>
             <SelectValue placeholder="Select a color" />
           </SelectTrigger>
           
-          <SelectContent className="h-60" asChild>
-            <ScrollArea>
-              {Object.keys(tailwindColors).filter((key) => key !== "others").map((name) => (
+          <SelectContent className="h-full" asChild>
+            <ScrollArea className="h-auto max-h-60">
+              {twColors.map((name) => (
                 <SelectItem key={name} value={name}>
                   {name}
                 </SelectItem>
