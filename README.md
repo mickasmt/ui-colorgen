@@ -26,7 +26,7 @@ This project is a user interface application designed to facilitate color setup 
 
 ## Roadmap
 
-- [X] Select initial color (all tailwind colors)
+- [x] ~Select initial color (all tailwind colors)~
 - [ ] Add documentation part (coming soon)
 - [ ] Live color preview of components
 - [ ] Import own variables from `globals.css`
