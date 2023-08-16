@@ -32,11 +32,6 @@ export const docsConfig: DocsConfig = {
           title: "Files generated",
           href: "/docs/documentation/files-generated",
         },
-        {
-          title: "Preview components",
-          href: "/docs/in-progress",
-          disabled: true,
-        },
       ],
     },
   ],

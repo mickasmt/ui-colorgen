@@ -27,11 +27,7 @@ This project is a user interface application designed to facilitate color setup 
 ## Roadmap
 
 - [x] ~Select initial color (all tailwind colors)~
-- [ ] Add documentation part (coming soon)
-- [ ] Live color preview of components
-- [ ] Import own variables from `globals.css`
-- [ ] Kamelcase for new variable name with "-"
-- [ ] Increase UX for "Add Variable" into sheet/drawer component
+- [x] Add documentation
 
 ## Known Issues
 
