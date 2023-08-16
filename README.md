@@ -4,9 +4,6 @@ An ui colorgen application built to help you with color setup in **shadcn/ui**.
 
 ![hero](public/og.jpg)
 
-> **Warning**
-> This app is currently in beta. See the roadmap below.
-> If you see something broken, you can ping me [@miickasmt](https://twitter.com/miickasmt).
 
 ## About this project
 
