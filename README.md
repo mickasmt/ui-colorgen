@@ -21,8 +21,6 @@ This project is a user interface application designed to facilitate color setup 
 - **Select the format** that suits you best
 - **Generate variables** for root in `globals.css`
 - **Generate colors part** for `tailwind.config.js`
-- **Import** your own variables for update (coming soon)
-- **Live color preview** of shadcn/ui components (coming soon)
 
 ## Roadmap
 
