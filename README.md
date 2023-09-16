@@ -19,19 +19,6 @@ This project is a user interface application designed to facilitate color setup 
 - **Generate variables** for root in `globals.css`
 - **Generate colors part** for `tailwind.config.js`
 
-## Roadmap
-
-- [x] ~Select initial color (all tailwind colors)~
-- [x] Add documentation
-
-## Known Issues
-
-A list of things not working right now:
-
-1. Reorder in `tailwind.config.js` not working if default variable is remove and create again.
-
-> If you see something broken, you can ping me [@miickasmt](https://twitter.com/miickasmt).
-
 ## Running Locally
 
 1. Install dependencies using pnpm:
