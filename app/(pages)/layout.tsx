@@ -1,12 +1,11 @@
 import Link from "next/link";
 
-import { docsConfig } from "@/config/docs";
 import { siteConfig } from "@/config/site";
 import { Icons } from "@/components/icons";
 import { MainNav } from "@/components/main-nav";
 import { SiteFooter } from "@/components/site-footer";
 import { ModeToggle } from "@/components/mode-toggle";
-import Banner from "@/components/banner";
+// import Banner from "@/components/banner";
 
 interface RootLayoutProps {
   children: React.ReactNode;
@@ -17,9 +16,9 @@ export default function RootLayout({ children }: RootLayoutProps) {
     <div className="flex min-h-screen flex-col">
       <header className="sticky top-0 z-40 w-full border-b bg-background">
         <div className="f-container flex h-15 items-center space-x-4 sm:justify-between sm:space-x-0">
-          <MainNav items={docsConfig.mainNav} />
+          <MainNav />
 
-          <Banner />
+          {/* <Banner /> */}
 
           <div className="flex max-sm:flex-1 items-center space-x-4 justify-end">
             <nav className="flex items-center space-x-4">
