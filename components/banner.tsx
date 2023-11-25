@@ -1,7 +1,7 @@
 export default function Banner() {
   return (
     <a
-      className="group -my-2 ml-6 hidden items-center gap-2 rounded-lg bg-white/25 px-3 py-2 text-xs text-slate-900 ring-1 ring-inset ring-black/[0.08] hover:bg-white/50 hover:ring-amber-600/[0.2] sm:flex"
+      className="group -my-2 ml-6 hidden items-center gap-2 rounded-lg bg-white/25 px-3 py-2 text-xs dark:text-white text-slate-900 ring-1 ring-inset ring-black/[0.08] hover:bg-white/50 hover:ring-amber-600/[0.2] sm:flex"
       href="https://github.com/mickasmt/astro-nomy"
       target="_blank"
     >
