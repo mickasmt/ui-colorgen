@@ -1,7 +1,7 @@
 export default function Banner() {
   return (
     <a
-      className="group -my-2 ml-6 hidden items-center gap-2 rounded-lg bg-white/25 px-3 py-2 text-xs text-slate-900 ring-1 ring-inset ring-black/[0.08] hover:bg-white/50 hover:ring-amber-600/[0.2] sm:flex"
+      className="group -my-2 ml-6 hidden items-center gap-2 rounded-lg bg-white/25 dark:bg-background px-3 py-2 text-xs dark:text-white  text-slate-900 ring-1 ring-inset ring-black/[0.1] dark:ring-white/[0.1] hover:bg-white/50 hover:ring-amber-600/[0.2] sm:flex"
       href="https://github.com/mickasmt/astro-nomy"
       target="_blank"
     >
@@ -31,8 +31,8 @@ export default function Banner() {
       <svg
         viewBox="0 0 5 8"
         className="h-2 w-[5px] ml-1 fill-black/30 group-hover:fill-black/60"
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         aria-hidden="true"
       >
         <path d="M.2.24A.75.75 0 0 1 1.26.2l3.5 3.25a.75.75 0 0 1 0 1.1L1.26 7.8A.75.75 0 0 1 .24 6.7L3.148 4 .24 1.3A.75.75 0 0 1 .2.24Z"></path>

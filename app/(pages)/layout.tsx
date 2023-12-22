@@ -17,8 +17,8 @@ export default function RootLayout({ children }: RootLayoutProps) {
     <div className="flex min-h-screen flex-col">
       <header className="sticky top-0 z-40 w-full border-b bg-background">
         <div className="f-container flex h-15 items-center space-x-4 sm:justify-between sm:space-x-0">
-          <MainNav items={docsConfig.mainNav} />
-
+          <MainNav />
+          
           <Banner />
 
           <div className="flex max-sm:flex-1 items-center space-x-4 justify-end">
