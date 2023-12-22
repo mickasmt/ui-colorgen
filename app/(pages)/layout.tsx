@@ -18,7 +18,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
       <header className="sticky top-0 z-40 w-full border-b bg-background">
         <div className="f-container flex h-15 items-center space-x-4 sm:justify-between sm:space-x-0">
           <MainNav />
-          
+
           <Banner />
 
           <div className="flex max-sm:flex-1 items-center space-x-4 justify-end">
@@ -28,7 +28,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
                 target="_blank"
                 rel="noreferrer"
               >
-                <Icons.twitter className="h-5.5 w-5.5" />
+                <Icons.twitter className="size-5.5" />
                 <span className="sr-only">Twitter</span>
               </Link>
               <Link
@@ -36,7 +36,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
                 target="_blank"
                 rel="noreferrer"
               >
-                <Icons.gitHub className="h-5.5 w-5.5" />
+                <Icons.gitHub className="size-5.5" />
                 <span className="sr-only">GitHub</span>
               </Link>
               <ModeToggle />

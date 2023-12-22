@@ -49,12 +49,12 @@ export function CopyButton({
       <span className="sr-only">Copy</span>
       {hasCopied ? (
         <div className="flex items-center justify-center">
-          <CheckCheck className="h-4 w-4" />
+          <CheckCheck className="size-4" />
           <span className="ml-2">Copied</span>
         </div>
       ) : (
         <div className="flex items-center justify-center">
-          <Clipboard className="h-4 w-4" />
+          <Clipboard className="size-4" />
           <span className="ml-2">Copy</span>
         </div>
       )}

@@ -37,7 +37,7 @@ export default function CustomizationForm() {
 
   const handleSelectInitialColor = (value: TwColorsKeys) => {
     updateInitialColor(value);
-  }
+  };
 
   const handleAddVariable = () => {
     addVariable();
@@ -58,7 +58,7 @@ export default function CustomizationForm() {
               onClick={() => deleteVariable(id)}
               className="group p-2"
             >
-              <MinusCircle className="h-5 w-5 text-slate-500 group-hover:text-slate-900" />
+              <MinusCircle className="size-5 text-slate-500 group-hover:text-slate-900" />
             </Button>
           </TooltipTrigger>
           <TooltipContent>
@@ -75,13 +75,15 @@ export default function CustomizationForm() {
         {/* Select initial color */}
         <Select
           defaultValue={initialColor}
-          onValueChange={(value: TwColorsKeys) => handleSelectInitialColor(value)}
-          >
+          onValueChange={(value: TwColorsKeys) =>
+            handleSelectInitialColor(value)
+          }
+        >
           <SelectTrigger className="w-auto sm:w-[150px] h-9">
             <span className="hidden sm:block text-slate-500">Color : </span>
             <SelectValue placeholder="Select a color" />
           </SelectTrigger>
-          
+
           <SelectContent className="h-full" asChild>
             <ScrollArea className="h-60">
               {twColors.map((name) => (
@@ -95,7 +97,7 @@ export default function CustomizationForm() {
 
         {/* Button - Add variable */}
         <Button size="sm" onClick={() => handleAddVariable()}>
-          <Plus className="mr-2 h-4 w-4" /> Add variable
+          <Plus className="mr-2 size-4" /> Add variable
         </Button>
       </div>
 
