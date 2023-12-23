@@ -62,7 +62,7 @@ module.exports = {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
-      height: {
+      spacing: {
         "5.5": "1.375rem",
         "15": "3.75rem",
       },
