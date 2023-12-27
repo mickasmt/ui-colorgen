@@ -1,15 +1,16 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
-import CodePreview from "@/components/code-preview";
-import ColorPalette from "@/components/color-palette";
-import CustomizationForm from "@/components/customization-form";
+import CodePreview from "@/components/old/code-preview";
+import CustomizationForm from "@/components/old/customization-form";
 
-export default function HomeColorsPage() {
+export default function CustomFormPage() {
   return (
-    <div className="f-container py-4">
+    <div className="container py-4">
       <div className="grid gap-11 grid-cols-1 xl:grid-cols-2 xl:auto-rows-fr">
-        <ColorPalette />
-
+        <div>
+          This page is under construction. <br />
+          Here is the old custom form for the moment.
+        </div>
         <Tabs defaultValue="form" className="relative mr-auto w-full">
           <div className="flex items-center justify-between">
             <TabsList className="w-full justify-start rounded-none border-b bg-transparent p-0">

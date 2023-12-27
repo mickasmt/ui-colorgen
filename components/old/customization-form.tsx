@@ -3,7 +3,7 @@
 import useColors from "@/store/useColors";
 
 import { MinusCircle, Plus } from "lucide-react";
-import { Button } from "./ui/button";
+import { Button } from "../ui/button";
 import {
   Tooltip,
   TooltipContent,
@@ -18,9 +18,9 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 
-import { ScrollArea } from "./ui/scroll-area";
+import { ScrollArea } from "../ui/scroll-area";
 import InputColorPicker from "./input-color-picker";
-import { useToast } from "./ui/use-toast";
+import { useToast } from "../ui/use-toast";
 import { twColors } from "@/config/colors";
 import { TwColorsKeys } from "@/types/colors";
 

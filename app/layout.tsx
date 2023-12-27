@@ -1,12 +1,9 @@
-import "@/styles/globals.css";
-// import { Inter } from "next/font/google";
+import "./globals.css";
 import { siteConfig } from "@/config/site"
 import { ThemeProvider } from "@/components/theme-provider";
 import { Analytics } from "@/components/analytics";
 import { Toaster } from "@/components/ui/toaster";
 import { TailwindIndicator } from "@/components/tailwind-indicator";
-
-// const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: {
@@ -23,38 +20,38 @@ export const metadata = {
     "Color generator",
     "Color Palette",
   ],
-  authors: [
-    {
-      name: "mickasmt",
-      url: "https://twitter.com/miickasmt",
-    },
-  ],
-  creator: "mickasmt",
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "white" },
-    { media: "(prefers-color-scheme: dark)", color: "black" },
-  ],
-  openGraph: {
-    type: "website",
-    locale: "fr_FR",
-    url: siteConfig.url,
-    title: siteConfig.name,
-    description: siteConfig.description,
-    siteName: siteConfig.name,
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: siteConfig.name,
-    description: siteConfig.description,
-    images: ["https://ui-colorgen.vercel.app/og.jpg"],
-    creator: "@miickasmt",
-  },
-  icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon-16x16.png",
-    apple: "/apple-touch-icon.png",
-  },
-  manifest: `${siteConfig.url}/site.webmanifest`,
+//   authors: [
+//     {
+//       name: "mickasmt",
+//       url: "https://twitter.com/miickasmt",
+//     },
+//   ],
+//   creator: "mickasmt",
+//   themeColor: [
+//     { media: "(prefers-color-scheme: light)", color: "white" },
+//     { media: "(prefers-color-scheme: dark)", color: "black" },
+//   ],
+//   openGraph: {
+//     type: "website",
+//     locale: "fr_FR",
+//     url: siteConfig.url,
+//     title: siteConfig.name,
+//     description: siteConfig.description,
+//     siteName: siteConfig.name,
+//   },
+//   twitter: {
+//     card: "summary_large_image",
+//     title: siteConfig.name,
+//     description: siteConfig.description,
+//     images: ["https://ui-colorgen.vercel.app/og.jpg"],
+//     creator: "@miickasmt",
+//   },
+//   icons: {
+//     icon: "/favicon.ico",
+//     shortcut: "/favicon-16x16.png",
+//     apple: "/apple-touch-icon.png",
+//   },
+//   manifest: `${siteConfig.url}/site.webmanifest`,
 }
 
 interface RootLayoutProps {

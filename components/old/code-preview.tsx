@@ -23,7 +23,7 @@ export default function CodePreview() {
 
   const handleSelectFormat = (value: TypeFormat) => {
     updateFormat(value);
-  }
+  };
 
   const cssGenerated = generateCSSCode(variables, format);
   const twConfigGenerated = generateTailwindCode(variables, format);
