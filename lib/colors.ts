@@ -20,7 +20,7 @@ export const wrapValue = (value: string, wrapper: string) => {
   } else if (wrapper === "nothing") {
     return value
       .replace(/rgb\((.*?)\)/g, (_, content) => content.replace(/,/g, " "))
-      .replace(/hsl\((.*?)\)/g, (_, content) => content.replace(/,/g, " "))
+      .replace(/hsl\((.*?)\)/g, (_, content) => content.replace(/,|%/g, " "))
       .replace(/#([a-fA-F0-9]{6}|[a-fA-F0-9]{3})/g, (_, content) => content);
   }
   return value;
@@ -38,8 +38,11 @@ export const getHSLFromTailwindColors = (color: string): string => {
       if (colorData && colorData.hsl) {
         return wrapValue(colorData.hsl, "nothing");
       }
-    } 
-  } else if ((colorKey === "white" || colorKey === "black") && tailwindColors.others) {
+    }
+  } else if (
+    (colorKey === "white" || colorKey === "black") &&
+    tailwindColors.others
+  ) {
     const othersScale = colorKey === "white" ? 0 : 500;
     return wrapValue(tailwindColors.others[othersScale].hsl, "nothing");
   }
@@ -47,13 +50,19 @@ export const getHSLFromTailwindColors = (color: string): string => {
   return "0 0% 100%";
 };
 
-export const generateVariablesFromColor = (selectedColor: string = "slate"): Variable[] => {
+export const generateVariablesFromColor = (
+  selectedColor: string = "slate"
+): Variable[] => {
   const colorVariables: Variable[] = [];
 
   const mapping = colorMapping(selectedColor);
   Object.keys(mapping).forEach((name) => {
-    const lightValue = getHSLFromTailwindColors(mapping[name as keyof typeof mapping].light);
-    const darkValue = getHSLFromTailwindColors(mapping[name as keyof typeof mapping].dark);
+    const lightValue = getHSLFromTailwindColors(
+      mapping[name as keyof typeof mapping].light
+    );
+    const darkValue = getHSLFromTailwindColors(
+      mapping[name as keyof typeof mapping].dark
+    );
 
     const variable: Variable = {
       id: uuidv4(),
@@ -69,20 +78,22 @@ export const generateVariablesFromColor = (selectedColor: string = "slate"): Var
   return colorVariables;
 };
 
-export const updateVariablesFromColor = (selectedColor: string, currentVariables: Variable[]): Variable[] => {
-  const customVariables = currentVariables.filter((variable) => variable.isNew === true);
+export const updateVariablesFromColor = (
+  selectedColor: string,
+  currentVariables: Variable[]
+): Variable[] => {
+  const customVariables = currentVariables.filter(
+    (variable) => variable.isNew === true
+  );
   const newDefaultVariables = generateVariablesFromColor(selectedColor);
 
   return [...newDefaultVariables, ...customVariables];
-}
-
-
+};
 
 // ===================== RGB Part =====================
 export function convertObjectToRGBString(obj: RgbColorPicker) {
   return Object.values(obj).join(", ");
 }
-
 
 // ===================== HSL Part =====================
 export function convertStringToArrayHsl(hslString: string) {
@@ -207,7 +218,7 @@ export function generateCSSCode(data: Variable[], format: TypeFormat): string {
 export function generateTailwindCode(
   variables: Variable[],
   format: string
-): {display: string, copy: string} {
+): { display: string; copy: string } {
   const colorProperties: {
     [colorName: string]: { [propertyName: string]: string };
   } = {};
