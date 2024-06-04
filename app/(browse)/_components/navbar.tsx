@@ -33,9 +33,9 @@ export function Navbar() {
 
         <div className="shrink-0 items-end">
           <div className="flex flex-row items-center justify-end space-x-2">
-            <Button variant="default" size="lg" className="px-4" asChild>
+            {/* <Button variant="default" size="lg" className="px-4" asChild>
               <Link href="/custom-form">Custom Form</Link>
-            </Button>
+            </Button> */}
             <NavMenu />
           </div>
         </div>
